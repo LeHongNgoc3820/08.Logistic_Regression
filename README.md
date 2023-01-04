@@ -11,8 +11,8 @@
 
 ### 1.2 Các ứng dụng
 
-+ Marketing (tiếp thị): Dự đoán liệu một khách hàng cụ thể có mua sản phẩm bảo hiểm hay không?
-+ Kinh doanh: Dự đoán liệu khách hàng có ngưng sử dụng sản phẩm/dịch vụ không?
++ Tiếp thị (Marketing): Dự đoán liệu một khách hàng cụ thể có mua sản phẩm bảo hiểm hay không?
++ Kinh doanh (Business): Dự đoán liệu khách hàng có ngưng sử dụng sản phẩm/dịch vụ không?
 + Banking (Ngân hàng): Dự đoán liệu khách hàng sẽ mặc định cho một khoản vay không?
 + Financial (Tài chính): Dự báo doanh nghiệp có gặp rủi ro phá sản/rủi ro tài chính hay không?
 
@@ -59,43 +59,3 @@ Dùng `sklearn.linear_model.LogisticRegression`
 + Đánh giá độ chính xác
 + Trực quan hoá kết quả
 + Dự đoán mới
-
-## Hiện tượng đa cộng tuyến trong mô hình hồi quy
-
-### Multicollinearity (đa cộng tuyến)
-
-+ Hiện tượng đa cộng tuyến: là hiện tượng các biến độc lập trong mô hình phụ thuộc lẫn nhau và thể hiện được dưới dạng hàm số.
-
-**Ví dụ:** Có hai biến độc lập A và B, khi ta tgawng A thì B tặng, A giảm thì B giảm...thì đó là một dấu hiệu của đa cộng tuyến.
-
-+ Nói một cách khác là hai biến độc lập có quan hệ rất mạnh với nhau, đúng ra hai biến này phải là 1 biến nhưng thực tế trong mô hình lại tách làm 2 biến.
-+ Hiện tượng đa cộng tuyến vi phạm giả định của mô hình hồi quy tuyến tính cổ điển là các biến độc lập không có mối quan hệ tuyến tính với nhau.
-
-### Nguyên nhân
-
-+ Thường thì cộng tuyến về cơ bản là vấn đề thiếu dữ liệu (data deficiency)
-+ hoặc do khi lập bảng khảo sát, chúng ta xây dựng nên các yếu tố không khác biệt nhau nhiều về tính chất, ý nghĩa. Ví dụ: tiền lượng và thu nhập/sở thích và điều quan tâm, ...
-+ Hoặc do đặc trưng của chính môi trường được khảo sát gây nên hiện tượng đa cộng tuyến.
-
-### Hậu quả
-
-+ Sai số chuẩn của các hệ số sẽ lớn
-+ Khoảng tin cậy lớn và thống kê t ít ý nghĩa
-+ Đưa một biến cộng tuyến vào mô hình hồi quy được chọn có thể làm thay đổi các giá trị của hệ số của các biến khác trong mô hình.
-+ Các ước lượng không chính xác
-
-**Tóm lại:** Khi các biến độc lập cộng tuyến, suy diễn thống kê trở nên không vững chắc, đặc biệt là khi có cộng tuyến gần hoàn hảo. Nếu hai biến có cộng tuyến cao thì rất khó tách biệt tác động riêng của từng biến lên biến phụ thuộc.
-
-### Nhận biết multicollinearity
-
-+ Dựa vào hệ số tương quan (correlation - theo Pearson): để biết có hay không tương quan tuyến tính mạnh giữa các biến độc lập (kiểm tra hệ số tương quan giữa các cặp biến (pairwise correlations): 
-    + **corr > 0.5 (hay < -0.5):** có hiện tượng tương quan
-    + **corr > 0.7 (hay -0.7):** tương quan mạnh
-    + **corr -1 hay 1:** tương quan hoàn hảo
-
-### Cách khắc phục
-
-+ Thu thập thêm dữ liệu
-+ Loại biến đa cộng tuyến ra khỏi mô hình trong trường hợp biến không cần thiết và có hệ số tương quan rất cao so với các biến khác.
-+ Chấp nhận đa cộng tuyến nếu như chắc chắn rằng các biến đưa vào mô hình đều là những biến cần thiết và quan trọng, được đảm bảo trên một nền tảng lý thuyết chắc chắn thì chúng ta không cần phải làm gì cả trong trường hợp này.
-+ Sử dụng phương pháp giảm chiều dữ liệu.
