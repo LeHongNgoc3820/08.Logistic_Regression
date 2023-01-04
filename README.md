@@ -31,7 +31,7 @@
     
 Một ví dụ đơn giản về Logistic Regression là: Lượng Calo, thời tiết và tuổi tác có ảnh hưởng gì đến nguy cơ bị đau tim không?
 
-## 2. Ưu/nhược điểm
+## 2. Ưu/khuyết điểm
 
 ### 2.1 Ưu điểm
 
