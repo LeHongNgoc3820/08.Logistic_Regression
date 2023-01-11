@@ -1,5 +1,9 @@
 # Logistic Regression
 
+[**Chi tiết bài viết**](https://github.com/LeHongNgoc3820/08.Logistic_Regression/blob/main/Demo_logistic_buy_cars_edit.ipynb)
+
+**Dưới đây là tóm tắt lí thuyết**
+
 ## 1. Tổng quan
 
 ### 1.1 Giới thiệu
