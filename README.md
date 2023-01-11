@@ -63,3 +63,12 @@ Dùng `sklearn.linear_model.LogisticRegression`
 + Đánh giá độ chính xác
 + Trực quan hoá kết quả
 + Dự đoán mới
+
+***Thanks for reading this post.***
+
+Make by ***Lucas***
+_______________________________
+**You can contact me at:**  
++ Gmail: lehongngoc.work@gmail.com   
++ GitHub: [LeHongNgoc3820](https://github.com/LeHongNgoc3820)   
++ Linkedln: [Ngoc Le Hong](https://www.linkedin.com/in/ngoc-le-hong-44131b21a/)
